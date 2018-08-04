@@ -1,10 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+
+import PlaceInput from './src/components/PlaceInput/PlaceInput';
+import PlaceList from './src/components/PlaceList/PlaceList';
+import PlaceDetail from './src/components/PlaceDetail/PlaceDetail';
+import placeImage from './src/assets/beautiful-place.jpg';
 
 export default class App extends React.Component {
 
   state = {
-    placeName: ''
+    places: [],
+    selectedPlace: null
   };
 
   placeNameChangeHandler = val => {
@@ -12,22 +18,57 @@ export default class App extends React.Component {
       placeName: val
     })
   };
-
+  placeAddedHanler = placeName => {
+    this.setState(prevState => {
+      return {
+        places: prevState.places.concat({
+          key: Math.random(),
+          name: placeName,
+          image: {
+            uri: 'https://i.ytimg.com/vi/LNFu92baQyQ/maxresdefault.jpg'
+          }
+        })
+      }
+    });
+  };
+  placeSelectedHandler = key => {
+    this.setState(prevState => {
+      return {
+        selectedPlace: prevState.places.find(place => {
+          return place.key === key;
+        })
+      }
+    });
+  }
+  placeDeletedHandler = () => {
+    this.setState(prevState => {
+      return{
+        places: prevState.places.filter(place => {
+          return place.key !== prevState.selectedPlace.key;
+        }),
+        selectedPlace: null
+      }
+    });
+  }
+  modalClosedHandler = () => {
+    this.setState({
+      selectedPlace: null
+    })
+  }
+ 
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.inputContainer}>
-          <TextInput
-            value={this.state.placeName}
-            placeholder="An awesome place"
-            onChangeText={this.placeNameChangeHandler}
-            style={styles.placeInput}
-          />
-          <Button
-            title="Add"
-            style={styles.placeButton}
-          />
-        </View>  
+        <PlaceDetail 
+          selectedPlace={this.state.selectedPlace}
+          onItemDeleted={this.placeDeletedHandler}
+          onModalClosed={this.modalClosedHandler}
+        />
+        <PlaceInput onPlaceAdded={this.placeAddedHanler} />
+        <PlaceList 
+          places={this.state.places}
+          onItemSelected={this.placeSelectedHandler}
+        />
       </View>
     );
   }
@@ -40,17 +81,5 @@ const styles = StyleSheet.create({
     padding: 26,
     alignItems: 'center',
     justifyContent: 'flex-start',
-  },
-  inputContainer: {
-    width: '100%',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between'
-  },
-  placeInput: {
-    width: '70%'
-  },
-  placeButton: {
-    width: '30%'
   }
 });
