@@ -57,6 +57,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="E:\projects\rn-cource\android\app\build\intermediates\exploded-aar\rncource\react-native-vector-icons\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
+        <dex dex="E:\projects\rn-cource\android\app\build\intermediates\pre-dexed\debug\rncource-react-native-vector-icons-unspecified_4364e3c687de3b44ed3fae8e39b9c029980e150c.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Администратор\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
         jumboMode="false"
         optimize="true"
