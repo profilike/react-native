@@ -1,4 +1,4 @@
-#Sat Aug 11 20:07:23 EEST 2018
+#Sun Aug 12 11:52:57 EEST 2018
 base.0=E\:\\projects\\rn-cource\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=E\:\\projects\\rn-cource\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
