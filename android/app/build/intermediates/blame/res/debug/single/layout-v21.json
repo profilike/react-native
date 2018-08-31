@@ -1,26 +1,26 @@
 [
     {
         "merged": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\bottom_navigation_item.xml",
-        "source": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\exploded-aar\\com.aurelhubert\\ahbottomnavigation\\2.0.6\\res\\layout-v21\\bottom_navigation_item.xml"
+        "source": "C:\\Users\\Администратор\\.gradle\\caches\\transforms-1\\files-1.1\\ahbottomnavigation-2.0.6.aar\\0f7a28bcc423e0dc835078e8100d789b\\res\\layout-v21\\bottom_navigation_item.xml"
     },
     {
         "merged": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout-v21\\notification_template_custom_big.xml"
+        "source": "C:\\Users\\Администратор\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\13d64c28e60f6df0a2fe487fad1c0b0e\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
         "merged": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout-v21\\notification_action_tombstone.xml"
+        "source": "C:\\Users\\Администратор\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\13d64c28e60f6df0a2fe487fad1c0b0e\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
         "merged": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\bottom_navigation_small_item.xml",
-        "source": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\exploded-aar\\com.aurelhubert\\ahbottomnavigation\\2.0.6\\res\\layout-v21\\bottom_navigation_small_item.xml"
+        "source": "C:\\Users\\Администратор\\.gradle\\caches\\transforms-1\\files-1.1\\ahbottomnavigation-2.0.6.aar\\0f7a28bcc423e0dc835078e8100d789b\\res\\layout-v21\\bottom_navigation_small_item.xml"
     },
     {
         "merged": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout-v21\\notification_template_icon_group.xml"
+        "source": "C:\\Users\\Администратор\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\13d64c28e60f6df0a2fe487fad1c0b0e\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
         "merged": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\layout-v21\\notification_action.xml"
+        "source": "C:\\Users\\Администратор\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\13d64c28e60f6df0a2fe487fad1c0b0e\\res\\layout-v21\\notification_action.xml"
     }
 ]

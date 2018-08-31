@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\provider_paths.xml",
+        "source": "E:\\projects\\rn-cource\\node_modules\\react-native-image-picker\\android\\build\\intermediates\\bundles\\debug\\res\\xml\\provider_paths.xml"
+    },
+    {
+        "merged": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\preferences.xml",
+        "source": "C:\\Users\\Администратор\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.55.4.aar\\21e626e48ded63660151f78ddec98598\\res\\xml\\preferences.xml"
+    }
+]

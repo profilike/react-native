@@ -17,7 +17,8 @@ const reducer = (state = initialState, action) => {
           name: action.placeName,
           image: {
             uri: action.image.uri
-          }
+          },
+          location: action.location
         })
       }
     case DELETE_PLACE:
