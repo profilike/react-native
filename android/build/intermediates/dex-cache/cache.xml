@@ -192,6 +192,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="E:\projects\rn-cource\android\app\build\intermediates\exploded-aar\rncource\react-native-image-picker\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="5e6570156a5a06abc6990fe34cd577d9fb0172c6">
+        <dex dex="E:\projects\rn-cource\android\app\build\intermediates\pre-dexed\debug\rncource-react-native-image-picker-unspecified_f543fe4735b96ddd2cf64079cc1cfa3d87c84914.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Администратор\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
         jumboMode="false"
         optimize="true"

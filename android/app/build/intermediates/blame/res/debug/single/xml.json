@@ -2,5 +2,9 @@
     {
         "merged": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
         "source": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.55.4\\res\\xml\\preferences.xml"
+    },
+    {
+        "merged": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml\\provider_paths.xml",
+        "source": "E:\\projects\\rn-cource\\android\\app\\build\\intermediates\\exploded-aar\\rncource\\react-native-image-picker\\unspecified\\res\\xml\\provider_paths.xml"
     }
 ]
