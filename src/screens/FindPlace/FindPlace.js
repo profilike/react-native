@@ -9,6 +9,7 @@ import {
 import { connect } from 'react-redux';
 
 import PlaceList from '../../components/PlaceList/PlaceList';
+import { getPlaces } from '../../store/actions/index';
  
 class FindPlace extends Component {
 
@@ -24,6 +25,10 @@ class FindPlace extends Component {
       removeAnim: new Animated.Value(1),
       placesAnim: new Animated.Value(0)
     }
+  }
+
+  componentDidMount() {
+    this.props.onLoadPlaces();
   }
 
   onNavigatorEvent = event => {
@@ -128,11 +133,18 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 26
   }
-})
+});
 
 const mapStateToProps = state => {
   return {
     places: state.places.places
   }
 };
-export default connect(mapStateToProps)(FindPlace);
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onLoadPlaces: () => dispatch(getPlaces())
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(FindPlace);
