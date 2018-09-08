@@ -14,7 +14,7 @@ import PickImage from '../../components/PickImage/PickImage';
 import PickLocation from '../../components/PickLocation/PickLocation';
 import MainText from '../../components/ui/MainText';
 import HeadingText from '../../components/ui/HeadingText';
-import { addPlace } from '../../store/actions/index';
+import { addPlace, startAddPlace } from '../../store/actions/index';
   
 class SharePlace extends Component {
 
@@ -25,7 +25,14 @@ class SharePlace extends Component {
   constructor(props) {
     super(props);
     this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
-    this.state = {
+  }
+
+  componentWillMount() {
+    this.reset();
+  }
+
+  reset = () => {
+    this.setState({
       controls: {
         placeName: {
           value: '',
@@ -44,10 +51,23 @@ class SharePlace extends Component {
           valid: false
         }
       }
+    })
+  }
+
+  componentDidUpdate() {
+    if(this.props.placeAdded) {
+      this.props.navigator.switchToTab({tabIndex: 0});
     }
   }
 
   onNavigatorEvent = event => {
+
+    if (event.type === "ScreenChangedEvent") {
+      if (event.id === "willAppear") {
+        this.props.onStartAddPlace();
+      }
+    }
+
     if(event.type === "NavBarButtonPress") {
       if(event.id === "sideDrawerToggle"){
         this.props.navigator.toggleDrawer({
@@ -78,8 +98,10 @@ class SharePlace extends Component {
       this.state.controls.placeName.value,
       this.state.controls.location.value,
       this.state.controls.image.value
-
     );
+    this.reset();
+    this.imagePicker.reset();
+    this.locationPicker.reset();
   }
   locationPickedHandler = location => {
     this.setState(prevState => {
@@ -129,8 +151,14 @@ class SharePlace extends Component {
           <MainText>
             <HeadingText>Share a Place with us!</HeadingText>
           </MainText>
-          <PickImage onImagePicked={this.imagePickedHandler} />
-          <PickLocation onLocationPicked={this.locationPickedHandler} />
+          <PickImage 
+            onImagePicked={this.imagePickedHandler} 
+            ref={ref => (this.imagePicker = ref)} 
+          />
+          <PickLocation 
+            onLocationPicked={this.locationPickedHandler}
+            ref={ref => (this.locationPicker = ref)}
+          />
           <PlaceInput 
             placeData={this.state.controls.placeName}
             onChangeText={this.placeNameChangedHandler}
@@ -152,13 +180,15 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = state => {
   return {
-    isLoading: state.ui.isLoading
+    isLoading: state.ui.isLoading,
+    placeAdded: state.places.placeAdded
   };
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    onAddPlace: (placeName, location, image) => dispatch(addPlace(placeName, location, image))
+    onAddPlace: (placeName, location, image) => dispatch(addPlace(placeName, location, image)),
+    onStartAddPlace: () => dispatch(startAddPlace())
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(SharePlace)

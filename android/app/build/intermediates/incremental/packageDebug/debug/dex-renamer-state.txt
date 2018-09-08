@@ -1,4 +1,4 @@
-#Mon Sep 03 17:14:54 EEST 2018
+#Sat Sep 08 09:45:49 EEST 2018
 base.0=E\:\\projects\\rn-cource\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex
